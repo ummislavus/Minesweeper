@@ -64,7 +64,7 @@ int Map::howManyBadNeighbors(int pos) {
 
     //special cases: the 4 corners
     if(pos == 0){//top left corner
-        
+
     }else if(pos == width-1){//top right corner
 
     }else if(pos == width*height -1){//bottom right corner
@@ -89,4 +89,12 @@ int Map::howManyBadNeighbors(int pos) {
 
 bool Map::posOK(int pos) const {
     return pos > 0 && pos < width*height;
+}
+
+void Map::setAllFieldsTo(char c) {
+
+    for(int i = 0; i < width*height; i++){
+        fields[i] = c;
+    }
+
 }

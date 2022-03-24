@@ -25,6 +25,7 @@ private:
     //Initializer
     void initializeMap();
     void rollAMap();
+    void setAllFieldsTo(char c);
     void calcNeighbors();
     int howManyBadNeighbors(int pos);
 
