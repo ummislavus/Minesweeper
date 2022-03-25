@@ -2,8 +2,6 @@
 // Created by Marc Fürup on 24.03.22.
 //
 
-#include <iostream>
-#include <sstream>
 #include "Field.h"
 
 Field::Field() {
@@ -35,7 +33,7 @@ int Field::badNeighborsCount() {
     return -1;
 }
 
-void Field::makeVisibil(){
+void Field::makeVisible(){
     lookedAt = true;
 }
 

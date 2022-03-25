@@ -5,6 +5,8 @@
 #ifndef MINESWEEPER_FIELD_H
 #define MINESWEEPER_FIELD_H
 
+#include <iostream>
+#include <sstream>
 
 class Field {
 
@@ -18,12 +20,12 @@ public:
     void setNeighbors(int count);
     bool gotLookedAt() const{return lookedAt;}
     void makeItAMine(){mine = true;}
-    bool isAMine(){return mine;}
+    bool isAMine() const{return mine;}
 
     int lookUp();
     int badNeighborsCount();
 
-    void makeVisibil();
+    void makeVisible();
 
     std::string toString();
 

@@ -4,12 +4,14 @@
 
 int main() {
     Game game;
-    game.showMap();
+    //game.showMap();
 
-    game.gameOver();
-    game.showMap();
+    game.gameLoop();
 
-     std::cout << game.getMap().toString();
+    //game.gameOver();
+    //game.showMap();
+
+    //std::cout << game.getMap().toString();
 
     //std::cout << "Still working on backend and frontend" << std::endl;
     return 0;

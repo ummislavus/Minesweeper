@@ -5,27 +5,32 @@
 #ifndef MINESWEEPER_MAP_H
 #define MINESWEEPER_MAP_H
 
+#include <cstdlib>
+#include <stdexcept>
+#include <iostream>
+#include <cmath>
+#include <vector>
+
 #include "Field.h"
 
-#define MAPMINERATIO 6.25f
+#define HOWMANYMINES 4
 
 class Map {
 private:
     unsigned int height;
     unsigned int width;
 
-    Field* fields;
+    std::vector<Field> fields;
 
 public:
     Map() = default;
     explicit Map(int h, int w);
     ~Map();
 
-    void setBadNeighborsOneField(int badNeighbors,int h,int w);
     Field getOneField(unsigned int h,unsigned int w);
 
-    unsigned int getHeight(){return height;}
-    unsigned int getWidth(){return width;}
+    unsigned int getHeight() const{return height;}
+    unsigned int getWidth() const{return width;}
 
 private:
     //Initializer
@@ -37,13 +42,15 @@ private:
     //Helper
     int howManyBadNeighbors(int pos);
 
-    int checkForMines(const int* neighborsPos, int n);
+    int checkForMines(const std::vector<int>& neighborsPos);
 
     bool posOK(int pos) const;
 
 public:
     //Gamechanger
-    void makeAllVisibile();
+    void makeAllVisible();
+
+    int lookOneUp(int h, int w);
 
     std::string toString();
 

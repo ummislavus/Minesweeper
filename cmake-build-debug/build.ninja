@@ -82,6 +82,13 @@ build CMakeFiles\Minesweeper.dir\Game.cpp.obj: CXX_COMPILER__Minesweeper_Debug C
   TARGET_COMPILE_PDB = CMakeFiles\Minesweeper.dir\
   TARGET_PDB = Minesweeper.pdb
 
+build CMakeFiles\Minesweeper.dir\Field.cpp.obj: CXX_COMPILER__Minesweeper_Debug C$:\Prog\Minesweeper\Field.cpp || cmake_object_order_depends_target_Minesweeper
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = CMakeFiles\Minesweeper.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minesweeper.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Minesweeper.dir\
+  TARGET_PDB = Minesweeper.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Minesweeper
@@ -90,7 +97,7 @@ build CMakeFiles\Minesweeper.dir\Game.cpp.obj: CXX_COMPILER__Minesweeper_Debug C
 #############################################
 # Link the executable Minesweeper.exe
 
-build Minesweeper.exe: CXX_EXECUTABLE_LINKER__Minesweeper_Debug CMakeFiles\Minesweeper.dir\main.cpp.obj CMakeFiles\Minesweeper.dir\Map.cpp.obj CMakeFiles\Minesweeper.dir\Game.cpp.obj
+build Minesweeper.exe: CXX_EXECUTABLE_LINKER__Minesweeper_Debug CMakeFiles\Minesweeper.dir\main.cpp.obj CMakeFiles\Minesweeper.dir\Map.cpp.obj CMakeFiles\Minesweeper.dir\Game.cpp.obj CMakeFiles\Minesweeper.dir\Field.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

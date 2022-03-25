@@ -1,4 +1,4 @@
-"/Users/marcfurup/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/212.5284.51/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/marcfurup/Documents/EigeneProgramme/Minesweeper
+C:\Users\marcf\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/marcf/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/bin/ninja/win/ninja.exe -G Ninja C:\Prog\Minesweeper
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/marcfurup/Documents/EigeneProgramme/Minesweeper/cmake-build-debug
+-- Build files have been written to: C:/Prog/Minesweeper/cmake-build-debug

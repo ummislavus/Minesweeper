@@ -6,23 +6,24 @@
 #define MINESWEEPER_GAME_H
 #include "Map.h"
 
-using namespace std;
-
 class Game {
 
     Map* map;
+    bool isOver;
 public:
     Game();
-
     ~Game();
+
+    bool gameLoop();
+
 
     void showMap();
 
-    char* shownArr();
-
     void gameOver();
+    void turn(int h,int w);
+    bool isItOver() const{return isOver;}
 
-    Map getMap(){return *map;}
+    bool getPlayerInputs(int& h, int& w);
 
 };
 
