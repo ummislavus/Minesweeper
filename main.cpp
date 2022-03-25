@@ -1,7 +1,16 @@
 #include <iostream>
+#include "Game.h"
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Game game;
+    game.showMap();
+
+    game.gameOver();
+    game.showMap();
+
+     std::cout << game.getMap().toString();
+
+    //std::cout << "Still working on backend and frontend" << std::endl;
     return 0;
 }
