@@ -18,31 +18,34 @@ Map::~Map() {
 }
 
 Field Map::getOneField(unsigned int h,unsigned int w) {
-    return fields[(h-1)*width+w-1];
+    return fields[(h)*width+w];
 }
 
 void Map::initializeMap() {
-    std::cout << "start initializeMap" << std::endl;
+    //std::cout << "start initializeMap" << std::endl;
     initAllFields();
-    std::cout << "fields initialized" << std::endl;
+    //std::cout << "fields initialized" << std::endl;
     rollAMap();
-    std::cout << "All Mines placed" << std::endl;
+    //std::cout << "All Mines placed" << std::endl;
     calcNeighbors();
-    std::cout << "NeighborMines counted" << std::endl;
+    //std::cout << "NeighborMines counted" << std::endl;
 }
 
 void Map::initAllFields() {
     for(int i = 0; i < width*height; i++){
-        fields.push_back(Field());
+        fields.emplace_back();
     }
 }
 
 void Map::rollAMap() {
 
     //int minesToPlace = floor((height*width) / HOWMANYMINES + 0.5f);
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_real_distribution<double> dist(0.0, height*width);
 
     for(int i = 0; i < HOWMANYMINES; i++){
-        int minePos = rand() % height*width;
+        int minePos = (int)dist(mt);
         //int neighbors = fields[minePos].lookUp();
         if(!fields[minePos].isAMine()){
             fields[minePos].makeItAMine();
@@ -69,7 +72,7 @@ int Map::howManyBadNeighbors(int pos) {
         std::cout << "Uupsi" << std::endl;
         throw std::out_of_range("Position");
     }
-    std::cout << "Pos: " << pos << std::endl;
+    //std::cout << "Pos: " << pos << std::endl;
 
     //special cases: the 4 corners
     if(pos == 0){//top left corner
